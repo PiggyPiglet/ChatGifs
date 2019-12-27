@@ -1,0 +1,7 @@
+commands:
+  reload:
+    error: "&7Something went wrong when reloading the config."
+    success: "&7Successfully reloaded the plugin."
+  gif:
+    error: "&7Something went wrong when grabbing the message off the queue."
+    unknown: "&7There is no gif with the name of &c%s&7."

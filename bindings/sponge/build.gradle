@@ -1,0 +1,11 @@
+repositories {
+    maven {
+        url = 'https://repo.spongepowered.org/maven'
+    }
+}
+
+dependencies {
+    compile project(":common")
+    compile 'me.piggypiglet:framework-sponge:1.8.11'
+    compileOnly 'org.spongepowered:spongeapi:7.1.0'
+}

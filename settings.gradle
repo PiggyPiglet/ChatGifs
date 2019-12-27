@@ -1,0 +1,9 @@
+rootProject.name = 'chatgifs'
+
+include (
+        'common',
+        ':bindings:bukkit',
+        ':bindings:sponge',
+        ':bindings:nukkit',
+        ':bindings:bungeecord'
+)

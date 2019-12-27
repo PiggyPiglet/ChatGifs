@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        maven {
+            url  "https://plugins.gradle.org/m2"
+        }
+    }
+
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:5.2.0"
+    }
+}
+
+import org.apache.tools.ant.filters.ReplaceTokens
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "com.github.johnrengelman.shadow"
+
+    sourceCompatibility = 1.8
+
+    group 'me.piggypiglet'
+    version '1.0.0'
+
+    repositories {
+        mavenCentral()
+        maven {
+            url = 'https://repo.piggypiglet.me/repository/maven-releases/'
+        }
+    }
+
+    processResources {
+        from(sourceSets.main.resources.srcDirs) {
+            filter ReplaceTokens, tokens: [version: version]
+        }
+    }
+
+    shadowJar {
+        destinationDirectory = file("$rootDir/build/libs/")
+        archiveName = "ChatGifs-${project.name}-${project.version}.jar"
+    }
+
+    compileJava.options.encoding = 'UTF-8'
+}

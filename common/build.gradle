@@ -1,0 +1,4 @@
+dependencies {
+    compileOnly 'me.piggypiglet:framework-minecraft-common:1.8.11'
+    compileOnly 'me.piggypiglet:framework-core:1.8.11'
+}

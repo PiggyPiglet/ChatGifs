@@ -1,0 +1,7 @@
+main: me.piggypiglet.chatgifs.ChatGifsPlugin
+version: @version@
+name: ChatGifs
+api: "1.0.0"
+author: PiggyPiglet
+website: https://piggypiglet.me
+prefix: CG
